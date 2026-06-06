@@ -14,7 +14,7 @@ module register_file
 );
 
     // 8 registers, 16-bit each-
-    reg[15:0] files[7:0];
+    reg[15:0] files[:0];
 
     // Read-            // Asynchronous read
     assign read_data1 = files[read_addr1];
@@ -27,3 +27,8 @@ module register_file
             files[write_addr] <= write_data;
     end
 endmodule
+
+module rom
+(
+    output[7:0] w
+)
